@@ -52,6 +52,10 @@
         [String]$Company = $null
     )
 
+    # Setup Variables
+    $AllDevices = @()
+    $InfoType = "Devices"
+
     if ($All) {
         $Organizations = Get-MerakiOrganizations -All
         $SaveLocation = ($SaveFolderPath + "\AllOrgs")
