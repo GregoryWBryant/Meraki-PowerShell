@@ -104,6 +104,8 @@
                     serial = $Device.serial
                     mac = $Device.mac
                     lanIp = $Device.lanIp
+                    wan1IP = $Device.wan1IP
+                    wan2IP = $Device.wan2IP
                     url = $Device.url
                     networkId = $Device.networkId
                     networkName = $Network.name
