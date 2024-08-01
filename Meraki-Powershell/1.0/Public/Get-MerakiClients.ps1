@@ -1,4 +1,4 @@
-﻿function Get-MerakiClients {
+function Get-MerakiClients {
     <#
     .SYNOPSIS
         Retrieves client information from Meraki networks.
@@ -100,14 +100,26 @@
                     OrganizationName = $Organization.name
                     networkName = $Network.name
                     mac = $Client.mac
-                    firstSeen = $Client.firstSeen
-                    lastSeen = $Client.lastSeen
+                    ip = $Client.ip
+                    description = $Client.description
+                    manufacturer = $Client.manufacturer
+                    os = $client.os
+                    user = $Client.user
+                    switchport = $Client.switchport
                     deviceTypePrediction = $Client.deviceTypePrediction
                     recentDeviceName = $Client.recentDeviceName
                     recentDeviceConnection = $Client.recentDeviceConnection
+                    namedVlan = $Client.namedVlan
+                    adaptivePolicyGroup = $Client.adaptivePolicyGroup
+                    recentDeviceSerial = $Client.recentDeviceSerial
+                    notes = $Client.notes
+                    groupPolicy8021x = $Client.groupPolicy8021x
+                    pskGroup = $Client.pskGroup
+                    vlan = $client.vlan
                     ssid = $Client.ssid
+                    firstSeen = $Client.firstSeen
+                    lastSeen = $Client.lastSeen
                     status = $Client.status
-                    description = $Client.description
                 }
                 $AllClients += $NewDevice
             }
