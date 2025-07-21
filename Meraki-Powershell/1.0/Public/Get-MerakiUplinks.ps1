@@ -1,4 +1,4 @@
-﻿function Get-MerakiUplinks {
+function Get-MerakiUplinks {
     <#
     .SYNOPSIS
         Retrieves Uplink information from Meraki orginizations.
@@ -124,7 +124,10 @@
                             SecondaryDNS = $UplinkInterface.secondaryDNS
                             IPAssisgnedby = $UplinkInterface.IPAssignedby
                             }
+
+                        $AllUplinks += $NewUplink
                      }
+
                 } else {
 
                     $NewUplink = [PSCustomObject]@{
@@ -144,9 +147,10 @@
                         SecondaryDNS = $Uplink.uplinks.secondaryDNS
                         IPAssisgnedby = $Uplink.uplinks.IPAssignedby
                         }
-                    }
-                 
+
                     $AllUplinks += $NewUplink
+
+                    }
                 
                 } catch {
                     Write-Host ($Organization.Name + " " + ": Has no $InfoType" )
